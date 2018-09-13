@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+.modal {
+  z-index: 10;
+  background-color: rgb(15, 25, 35, .7);
+  position: absolute;
+  width: 50%;
+  height: 625px;
+  top: 0;
+  left: 25%;
+}
+
+
+
+.replay {
+  position: absolute;
+  width: 200px;
+  height: 170px;
+  top: 35%;
+  left: 35%;
+  font-size: 48px;
+
+}
