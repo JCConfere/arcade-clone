@@ -12,7 +12,9 @@ body {
   left: 25%;
 }
 
-
+.hide {
+  display: none;
+}
 
 .replay {
   position: absolute;

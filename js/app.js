@@ -1,44 +1,31 @@
-// Enemies our player must avoid
-const Enemy = function(x, y) {
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
+class Enemy {
+  constructor(x,y) {
     this.x = x;
     this.y = y + 55;
-
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
+    this.sprite='images/enemy-bug.png';
     this.horizontal = 100 + Math.floor(Math.random() * 256);
     this.offscreen = this.horizontal * 5;
     this.resetBug = -101;
-};
+  }
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
-Enemy.prototype.update = function(dt) {
-    // You should multiply any movement by the dt parameter
-    // which will ensure the game runs at the same speed for
-    // all computers.
+  update(dt) {
     this.x += this.horizontal * dt;
 
-    // reset enemies to the left hand side of the screen
     if(this.x < this.offscreen) {
       this.x += 200 * dt;
     } else {
-      this.x = this.resetBug;
+      this.x = this.resetBug
     }
-};
 
-// Draw the enemy on the screen, required method for game
-Enemy.prototype.render = function() {
-    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
-};
+  }
 
+  render() {ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+  }
 
 
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
+} //  closes Enemy class
+
+
 class Hero {
   constructor() {
     this.sprite = 'images/char-boy.png';
@@ -109,14 +96,6 @@ class Hero {
 
 } // closes Hero class
 
-
-
-
-
-
-
-
-
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 const bug1 = new Enemy(-101, 0);
@@ -127,6 +106,7 @@ const bug5 = new Enemy(-101, 166);
 const bug6 = new Enemy(-101*2, 249)
 const allEnemies = [];
 allEnemies.push(bug1, bug2, bug3, bug4, bug5, bug6);
+this.y = allEnemies[Math.floor(Math.random() * allEnemies.length)];
 
 // Place the player object in a variable called player
 const player = new Hero();
