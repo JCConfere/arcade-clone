@@ -2,7 +2,7 @@ Instructions:
 
 Welcome!  On the right hand side of the repository there is a button that will allow
 you to clone or download the files necessary to play this game.  Once you have a copy
-of the game on your computer open the folder where the game was saved. Right click on there
+of the game on your computer open the folder where the game was saved. Right click on the
 index.html file and choose the "open with" option.  This will allow you to select the browser
 of your choice. This will load the game, and from there you can follow the directions below! 
 
